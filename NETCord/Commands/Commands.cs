@@ -39,7 +39,7 @@ namespace NETCord.Commands
                     embedBuilder.AddField(attachment.Filename, "```\nThe file is to big to be displayed.\n```");
                 else embedBuilder.AddField(attachment.Filename, $"```\n{WebClient.DownloadString(attachment.Url)}\n```");
                 embedBuilder.WithThumbnailUrl("https://raw.githubusercontent.com/eb-06/NETCord/main/Resources/GitHub.png");
-                embedBuilder.WithColor(Color.Green);
+                embedBuilder.WithColor(Color.Default);
                 embedBuilder.WithFooter("NETCord", "https://avatars.githubusercontent.com/u/73481203?v=4").WithTimestamp(DateTimeOffset.Now);
                 await RespondAsync(embed: embedBuilder.Build());
             }
