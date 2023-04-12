@@ -3,8 +3,8 @@
 * A pre-made application. - https://discord.com/developers/docs/getting-started
 
 ## What is the use of this?
-* It allows you to use the advanced intelligance of AI provided by OpenAI.
-* Allows you to use the AI of which follows a script making it primarly focused on questions related to the programming language Lua.
+* Allows you to use the Discord bot from the Discord client.
+* Allows the bot to interact with the host's program.
 
 ## Examples:
 __List of commands and short information of what they do.__
