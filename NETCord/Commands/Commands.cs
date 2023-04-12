@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NETCord.Commands
 {
@@ -19,6 +20,13 @@ namespace NETCord.Commands
 
         [SlashCommand("choice", "Choose between true or false.")]
         public async Task Choice(bool choice) => await RespondAsync($"You picked: {choice}");
+
+        [SlashCommand("messagebox", "Create and send a message box with a customized message.")]
+        public async Task NewMessageBox([Remainder] string message)
+        {
+            await RespondAsync("Created message box!");
+            MessageBox.Show(message, "NETCord", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         [SlashCommand("readfile", "Read contents of a file.")]
         public async Task ReadFile(IAttachment attachment)
